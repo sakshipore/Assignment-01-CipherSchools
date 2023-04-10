@@ -1,7 +1,6 @@
 import 'package:cipher_schools_assignment/view/courses_screen.dart';
 import 'package:cipher_schools_assignment/widgets/my_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -11,18 +10,18 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int selectedIndex = 0;
-  late List listOfPages;
+  int _selectedIndex = 0;
+  late List _listOfPages;
 
   void _onItemTapped(int index) {
     setState(() {
-      selectedIndex = index;
+      _selectedIndex = index;
     });
   }
 
   @override
   void initState() {
-    listOfPages = [
+    _listOfPages = [
       HomeScreen(),
       CoursesScreen(),
     ];
@@ -34,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: MyAppBar(),
       body: SafeArea(
-        child: listOfPages[selectedIndex],
+        child: _listOfPages[_selectedIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -48,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
         unselectedLabelStyle: TextStyle(
           color: Colors.white,
         ),
-        currentIndex: selectedIndex, 
+        currentIndex: _selectedIndex, 
         onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(

@@ -1,6 +1,7 @@
 import 'package:cipher_schools_assignment/routes/routes_names.dart';
 import 'package:cipher_schools_assignment/view/courses_screen.dart';
 import 'package:cipher_schools_assignment/view/home_screen.dart';
+import 'package:cipher_schools_assignment/view/start_screen.dart';
 import 'package:get/get.dart';
 
 class AppRoutes {
@@ -14,8 +15,8 @@ class AppRoutes {
       page: () => CoursesScreen(),
     ),
     GetPage(
-      name: RoutesNames.coursesScreen,
-      page: () => CoursesScreen(),
+      name: RoutesNames.startScreen,
+      page: () => StartScreen(),
     ),
   ];
 }
