@@ -13,5 +13,9 @@ class AppRoutes {
       name: RoutesNames.coursesScreen,
       page: () => CoursesScreen(),
     ),
+    GetPage(
+      name: RoutesNames.coursesScreen,
+      page: () => CoursesScreen(),
+    ),
   ];
 }
